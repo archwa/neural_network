@@ -1,5 +1,15 @@
-#!/usr/bin/python
+# format-data.py
+# used to format csv data into a usable train/test structure
+
 import sys
+
+if len(sys.argv) < 2:
+  print('Usage:')
+  print('python format-data.py <file> <fraction>')
+  print('  <file> is the path of a csv data file')
+  print('  <fraction> is the fraction of data used for training; the remainder of data is used for testing')
+  exit()
+
 import pandas as pd
 import numpy as np
 
